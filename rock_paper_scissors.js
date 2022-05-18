@@ -21,8 +21,8 @@ Compare the selections using <If> statements
 Return a string that determines the winner of the round
 */
 
-
-function singleRound(playerSelection, computerSelection) {
+// Write a function for playing one round of RPS
+function playRound(playerSelection, computerSelection) {
    if (playerSelection == computerSelection) {
        return "This round is a tie";
     } 
@@ -34,6 +34,7 @@ function singleRound(playerSelection, computerSelection) {
     }
 }
 
+// Write a helper function that will determine which item beats the other
 function winner(player, computer) {
     let win = "";
     
@@ -57,4 +58,4 @@ function winner(player, computer) {
 const playerSelection = prompt("Choose 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
 const computerSelection = computerPlay();
 
-console.log(singleRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection, computerSelection));
