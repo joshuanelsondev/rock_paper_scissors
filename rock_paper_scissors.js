@@ -4,12 +4,13 @@ function computerPlay() {
    play = Math.floor(Math.random() * 3);
   
    if (play == 0) {
-       return console.log("rock");
+       return "rock";
    } else if (play == 1) {
-       return console.log("paper");
+       return "paper";
    } else {
-       return console.log("scissors");
+       return "scissors";
    }
+   
 }
 
 /* A single round of RPS. 
@@ -27,9 +28,9 @@ function singleRound(playerSelection, computerSelection) {
     } 
 
     if (winner(playerSelection, computerSelection) == playerSelection) {
-        return `You Win! ${playerSelection} beats ${computerSelection}`;
+        return `You Win! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}!`;
     } else {
-        return `You Lose, ${computerSelection} beats ${playerSelection}`;
+        return `You Lose, ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}.`;
     }
 }
 
@@ -53,7 +54,7 @@ function winner(player, computer) {
     return win;
 }
 
-const playerSelection = prompt("Choose 'Rock', 'Paper', or 'Scissors': ")
+const playerSelection = prompt("Choose 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
 const computerSelection = computerPlay();
 
 console.log(singleRound(playerSelection, computerSelection));
