@@ -25,11 +25,13 @@ function singleRound(playerSelection, computerSelection) {
    if (playerSelection == computerSelection) {
        return "This round is a tie";
     } 
-}
 
-const playerSelection = prompt("Choose 'Rock', 'Paper', or 'Scissors': ").toLowerCase;
-const computerSelection = computerPlay();
-console.log(singleRound(playerSelection, computerSelection));
+    if (winner(playerSelection, computerSelection) == playerSelection) {
+        return `You Win! ${playerSelection} beats ${computerSelection}`;
+    } else {
+        return `You Lose, ${computerSelection} beats ${playerSelection}`;
+    }
+}
 
 function winner(player, computer) {
     let win = "";
@@ -50,3 +52,8 @@ function winner(player, computer) {
         
     return win;
 }
+
+const playerSelection = prompt("Choose 'Rock', 'Paper', or 'Scissors': ")
+const computerSelection = computerPlay();
+
+console.log(singleRound(playerSelection, computerSelection));
