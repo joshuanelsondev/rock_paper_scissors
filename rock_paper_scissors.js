@@ -56,20 +56,17 @@ function winner(player, computer) {
     return win;
 }
 
-const playerSelection = prompt("Choose 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
-const computerSelection = computerPlay();
-
-
-
 // Create a function 'game()' call 'playRound' five times to create a 5-round game of RPS
+
 const game = () => {
     for (let i = 0; i < 5; i++) {
         
-        return round = playerSelection;
-    }
+        const playerSelection = prompt("Choose 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
 
-    
+        console.log(playRound(playerSelection, computerSelection));
+        
+    }
 }
 
-console.log(game());
-
+const computerSelection = computerPlay();
+game();
