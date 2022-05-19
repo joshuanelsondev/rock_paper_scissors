@@ -22,16 +22,16 @@ Return a string that determines the winner of the round
 */
 
 // Write a function for playing one round of RPS
-function playRound(playerSelection, computerSelection) {
+function playRound(player, computer) {
 
-   if (playerSelection == computerSelection) {
+   if (player == computer) {
        return "This round is a tie";
     } 
 
-    if (winner(playerSelection, computerSelection) == playerSelection) {
-        return `You Win! ${playerSelection.toUpperCase()} beats ${computerSelection.toUpperCase()}!`;
+    if (winner(player, computer) == player) {
+        return `You Win! ${player.toUpperCase()} beats ${computer.toUpperCase()}!`;
     } else {
-        return `You Lose, ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}.`;
+        return `You Lose, ${computer.toUpperCase()} beats ${player.toUpperCase()}.`;
     }
 }
 
@@ -61,12 +61,16 @@ function winner(player, computer) {
 const game = () => {
     for (let i = 0; i < 5; i++) {
         
-        const playerSelection = prompt("Choose 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
-
-        console.log(playRound(playerSelection, computerSelection));
+      
+        console.log(playRound(playerSelection(), computerSelection));
         
     }
-}
+};
 
+const playerSelection = () => {
+
+    return prompt("Choose 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
+};
 const computerSelection = computerPlay();
 game();
+
