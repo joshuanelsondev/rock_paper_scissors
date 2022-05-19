@@ -23,6 +23,7 @@ Return a string that determines the winner of the round
 
 // Write a function for playing one round of RPS
 function playRound(playerSelection, computerSelection) {
+
    if (playerSelection == computerSelection) {
        return "This round is a tie";
     } 
@@ -58,4 +59,17 @@ function winner(player, computer) {
 const playerSelection = prompt("Choose 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
 const computerSelection = computerPlay();
 
-console.log(playRound(playerSelection, computerSelection));
+
+
+// Create a function 'game()' call 'playRound' five times to create a 5-round game of RPS
+const game = () => {
+    for (let i = 0; i < 5; i++) {
+        
+        return round = playerSelection;
+    }
+
+    
+}
+
+console.log(game());
+
