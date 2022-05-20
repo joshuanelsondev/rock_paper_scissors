@@ -1,6 +1,5 @@
 // Computer picks randomly, rock, paper, or scissors
 function computerPlay() {
-
    play = Math.floor(Math.random() * 3);
   
    if (play == 0) {
@@ -62,7 +61,6 @@ function winner(player, computer) {
 
 const game = () => {
     for (let i = 0; i < 5; i++) {
-
         console.log(playRound(playerSelection(), computerSelection)); 
         console.log(`Player score: ${playerScore}, Computer score: ${computerScore}`);   
     }
@@ -78,9 +76,9 @@ const game = () => {
 
 // Create a function that prompts the user to pick between criteria; prompt user until answer fits criteria via a while loop
 const playerSelection = () => {
-    
     let x = 0;
     let choose = prompt("Choose 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
+   
     while (x == 0) {
 
         if ((choose == "rock") || (choose == "paper") || (choose == "scissors")) {
