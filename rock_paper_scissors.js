@@ -60,17 +60,32 @@ function winner(player, computer) {
 
 const game = () => {
     for (let i = 0; i < 5; i++) {
-        
-      
-        console.log(playRound(playerSelection(), computerSelection));
-        
+
+        console.log(playRound(playerSelection(), computerSelection));    
     }
 };
 
 const playerSelection = () => {
+    
+    let x = 0;
+    let choose = prompt("Choose 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
+    while (x == 0) {
 
-    return prompt("Choose 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
+        if ((choose == "rock") || (choose == "paper") || (choose == "scissors")) {
+            x++;
+        } else {
+            choose = prompt("Invalid entry, please enter 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
+            x = 0;
+        }
+        
+    }
+    
+    
+   
 };
+
+
+
 const computerSelection = computerPlay();
 game();
 
