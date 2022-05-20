@@ -29,8 +29,10 @@ function playRound(player, computer) {
     } 
 
     if (winner(player, computer) == player) {
+        playerScore += 1;
         return `You Win! ${player.toUpperCase()} beats ${computer.toUpperCase()}!`;
     } else {
+        computerScore += 1;
         return `You Lose, ${computer.toUpperCase()} beats ${player.toUpperCase()}.`;
     }
 }
@@ -63,6 +65,14 @@ const game = () => {
 
         console.log(playRound(playerSelection(), computerSelection));    
     }
+    
+    if (playerScore > computerScore) {
+        return "WINNER!";
+    } else if (playerScore < computerScore) {
+        return "Sorry, you lose...play again!";
+    } else {
+        return "It's a tie!";
+    }
 };
 
 // Create a function that prompts the user to pick between criteria; prompt user until answer fits criteria via a while loop
@@ -86,5 +96,7 @@ const playerSelection = () => {
 
 
 const computerSelection = computerPlay();
-game();
+let playerScore = 0;
+let computerScore = 0;
+console.log(game());
 
