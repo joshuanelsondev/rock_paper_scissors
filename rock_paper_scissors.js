@@ -1,6 +1,6 @@
 // Computer picks randomly, rock, paper, or scissors
 function computerPlay() {
-   play = Math.floor(Math.random() * 3);
+   play = Math.floor(Math.random() * 2);
   
    if (play == 0) {
        return "rock";
@@ -22,8 +22,8 @@ Return a string that determines the winner of the round
 
 // Write a function for playing one round of RPS
 function playRound(player, computer) {
-
-   if (player == computer) {
+  
+    if (player == computer) {
        return "This round is a tie";
     } 
 
@@ -57,9 +57,10 @@ function winner(player, computer) {
     return win;
 }
 
-// Create a function 'game()' call 'playRound' five times to create a 5-round game of RPS
+// Create a function 'game()', call 'playRound' five times to create a 5-round game of RPS
 
 const game = () => {
+   
     for (let i = 0; i < 5; i++) {
         console.log(playRound(playerSelection(), computerSelection)); 
         console.log(`Player score: ${playerScore}, Computer score: ${computerScore}`);   
@@ -97,5 +98,6 @@ const playerSelection = () => {
 const computerSelection = computerPlay();
 let playerScore = 0;
 let computerScore = 0;
+
 console.log(game());
 
