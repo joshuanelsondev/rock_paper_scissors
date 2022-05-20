@@ -63,7 +63,8 @@ function winner(player, computer) {
 const game = () => {
     for (let i = 0; i < 5; i++) {
 
-        console.log(playRound(playerSelection(), computerSelection));    
+        console.log(playRound(playerSelection(), computerSelection)); 
+        console.log(`Player score: ${playerScore}, Computer score: ${computerScore}`);   
     }
     
     if (playerScore > computerScore) {
