@@ -65,6 +65,7 @@ const game = () => {
     }
 };
 
+// Create a function that prompts the user to pick between criteria; prompt user until answer fits criteria via a while loop
 const playerSelection = () => {
     
     let x = 0;
@@ -73,15 +74,13 @@ const playerSelection = () => {
 
         if ((choose == "rock") || (choose == "paper") || (choose == "scissors")) {
             x++;
+            return choose;    
         } else {
             choose = prompt("Invalid entry, please enter 'Rock', 'Paper', or 'Scissors': ").toLowerCase();
             x = 0;
         }
         
-    }
-    
-    
-   
+    } 
 };
 
 
