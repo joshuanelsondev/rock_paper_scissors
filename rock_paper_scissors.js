@@ -10,7 +10,7 @@ function computerPlay() {
        return "scissors";
    }
 
-}
+};
 
 /* A single round of RPS. 
 Prompt the user for their selection, be sure to use toLowerCase for case-insensitive response
@@ -95,7 +95,7 @@ const playerSelection = () => {
 
 
 
-let computerSelection = computerPlay();
+
 let playerScore = 0;
 let computerScore = 0;
 
