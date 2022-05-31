@@ -10,7 +10,7 @@ function computerPlay() {
        return "scissors";
    }
 
-};
+}
 
 /* A single round of RPS. 
 Prompt the user for their selection, be sure to use toLowerCase for case-insensitive response
@@ -24,14 +24,17 @@ Return a string that determines the winner of the round
 function playRound(player, computer) {
   
     if (player == computer) {
-       return "This round is a tie";
+        console.log(`Player score: ${playerScore}, Computer score: ${computerScore}`) 
+        return "This round is a tie";
     } 
 
     if (winner(player, computer) == player) {
         playerScore += 1;
+        console.log(`Player score: ${playerScore}, Computer score: ${computerScore}`);
         return `You Win! ${player.toUpperCase()} beats ${computer.toUpperCase()}!`;
     } else {
         computerScore += 1;
+        console.log(`Player score: ${playerScore}, Computer score: ${computerScore}`);
         return `You Lose, ${computer.toUpperCase()} beats ${player.toUpperCase()}.`;
     }
 }
@@ -65,7 +68,7 @@ const game = () => {
         console.log(playRound(playerSelection(), computerPlay())); 
         console.log(`Player score: ${playerScore}, Computer score: ${computerScore}`);   
     }
-    
+
     if (playerScore > computerScore) {
         return "WINNER!";
     } else if (playerScore < computerScore) {
@@ -99,5 +102,32 @@ const playerSelection = () => {
 let playerScore = 0;
 let computerScore = 0;
 
-console.log(game());
+// console.log(game());
+
+// DOM 
+
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+   return playRound(rock.id, computerPlay());
+});
+
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+    console.log(playRound(paper.id, computerPlay()));
+});
+
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', () => {
+    console.log(playRound(scissors.id, computerPlay()));
+});
+
+const container = document.getElementById('container');
+
+
+
+
+
+
+
+
 
