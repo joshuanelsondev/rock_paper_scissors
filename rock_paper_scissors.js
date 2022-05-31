@@ -1,6 +1,6 @@
 // Computer picks randomly, rock, paper, or scissors
 function computerPlay() {
-   play = Math.floor(Math.random() * 2);
+   play = Math.floor(Math.random() * 3);
   
    if (play == 0) {
        return "rock";
@@ -9,7 +9,7 @@ function computerPlay() {
    } else {
        return "scissors";
    }
-   
+
 }
 
 /* A single round of RPS. 
@@ -62,7 +62,7 @@ function winner(player, computer) {
 const game = () => {
    
     for (let i = 0; i < 5; i++) {
-        console.log(playRound(playerSelection(), computerSelection)); 
+        console.log(playRound(playerSelection(), computerPlay())); 
         console.log(`Player score: ${playerScore}, Computer score: ${computerScore}`);   
     }
     
@@ -95,7 +95,7 @@ const playerSelection = () => {
 
 
 
-const computerSelection = computerPlay();
+let computerSelection = computerPlay();
 let playerScore = 0;
 let computerScore = 0;
 
