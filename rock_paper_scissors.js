@@ -79,6 +79,7 @@ const computerScoreDisplay = document.getElementById('computer-score');
 const roundResultDisplay = document.getElementById('result');
 const winnerDisplay = document.getElementById('winner');
 const playerButton = document.querySelectorAll('button');
+const container = document.getElementById('container');
 let userChoice;
 let computerChoice;
 let result;
@@ -88,11 +89,11 @@ let computerScore = 0;
 playerButton.forEach(playerChoice => playerChoice.addEventListener('click', playGame));
 
 function playGame(e) {
-    playerResult.innerHTML = e.target.id;
+    playerResult.textContent = e.target.id;
     computerPlay();
     winner();
-    playerScoreDisplay.innerHTML = playerScore;
-    computerScoreDisplay.innerHTML = computerScore;
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
 
 }
 
@@ -107,13 +108,12 @@ function computerPlay() {
     } else {
         computerChoice = "scissors";
     }
-    computerResult.innerHTML = computerChoice.toUpperCase();
+    computerResult.textContent = computerChoice;
+
 }
-
-
 // Write a helper function that will determine which item beats the other
 function winner() {
-    player = playerResult.innerHTML;
+    player = playerResult.textContent;
     computer = computerChoice;
 
     if ((player == "rock") && (computer == "scissors")) {
@@ -139,18 +139,30 @@ function winner() {
         
     }
 
-    roundResultDisplay.innerHTML = `Round Result: ${result}`;
+    roundResultDisplay.textContent = `Round Result: ${result}`;
 
     if (playerScore >= 5) {
-        winnerDisplay.innerHTML = "Player Wins!";
+        winnerDisplay.textContent = "Player Wins!";
         playerButton.forEach(playerChoice => playerChoice.removeEventListener('click', playGame));
+        gameOver();
     } else if (computerScore >= 5) {
-        winnerDisplay.innerHTML = "Computer Wins!";
+        winnerDisplay.textContent = "Computer Wins!";
         playerButton.forEach(playerChoice => playerChoice.removeEventListener('click', playGame));
-
+        gameOver();
     }
 }
 
+function gameOver() {
+    const restartButton = document.createElement('button');
+    restartButton.innerText = "PLAY AGAIN";
+    container.appendChild(restartButton);
+    restartButton.addEventListener('click', playAgain);
+
+}
+
+function playAgain() {
+    window.location.reload();
+}
 
 
 
