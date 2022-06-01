@@ -85,14 +85,16 @@ let result;
 let playerScore = 0;
 let computerScore = 0;
 
-playerButton.forEach(playerChoice => playerChoice.addEventListener('click', (e) => {
-    userChoice = e.target.id;
-    playerResult.innerHTML = userChoice.toUpperCase();
+playerButton.forEach(playerChoice => playerChoice.addEventListener('click', playGame));
+
+function playGame(e) {
+    playerResult.innerHTML = e.target.id;
     computerPlay();
     winner();
     playerScoreDisplay.innerHTML = playerScore;
     computerScoreDisplay.innerHTML = computerScore;
-}));
+
+}
 
 // Computer picks randomly, rock, paper, or scissors
 function computerPlay() {
@@ -111,7 +113,7 @@ function computerPlay() {
 
 // Write a helper function that will determine which item beats the other
 function winner() {
-    player = userChoice;
+    player = playerResult.innerHTML;
     computer = computerChoice;
 
     if ((player == "rock") && (computer == "scissors")) {
@@ -141,8 +143,11 @@ function winner() {
 
     if (playerScore >= 5) {
         winnerDisplay.innerHTML = "Player Wins!";
+        playerButton.forEach(playerChoice => playerChoice.removeEventListener('click', playGame));
     } else if (computerScore >= 5) {
         winnerDisplay.innerHTML = "Computer Wins!";
+        playerButton.forEach(playerChoice => playerChoice.removeEventListener('click', playGame));
+
     }
 }
 
