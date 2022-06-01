@@ -76,7 +76,8 @@ const playerResult = document.getElementById('player');
 const playerScoreDisplay = document.getElementById('player-score');
 const computerResult = document.getElementById('computer');
 const computerScoreDisplay = document.getElementById('computer-score');
-const resultDisplay = document.getElementById('result');
+const roundResultDisplay = document.getElementById('result');
+const winnerDisplay = document.getElementById('winner');
 const playerButton = document.querySelectorAll('button');
 let userChoice;
 let computerChoice;
@@ -123,20 +124,26 @@ function winner() {
         result = "You Win!";
         playerScore++;
     } else if ((player == "rock") && (computer == "paper")) {
-        result = "You Lose";
+        result = "Computer Wins!";
         computerScore++;
     } else if ((player == "scissors") && ("rock")) {
-        result = "You Lose";
+        result = "Computer Wins!";
         computerScore++;
     } else if ((player == "paper") && (computer == "scissors")) {
-        result = "You Lose";
+        result = "Computer Wins!";
         computerScore++;
     } else {
-        result = "It's a Tie";
+        result = "It's a Tie!";
         
     }
 
-    resultDisplay.innerHTML = result;
+    roundResultDisplay.innerHTML = `Round Result: ${result}`;
+
+    if (playerScore >= 5) {
+        winnerDisplay.innerHTML = "Player Wins!";
+    } else if (computerScore >= 5) {
+        winnerDisplay.innerHTML = "Computer Wins!";
+    }
 }
 
 
