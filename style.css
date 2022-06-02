@@ -1,15 +1,63 @@
+body {
+    background-color: honeydew;
+    font-family: Courier, Roboto, sans-serif;
+}
+
+
+
+
 /* Buttons */
-.button {
-    background-color: gray;
-    height: auto;
-    width: 10em;
+#container {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-#paper {
+.playerHands {
+    display: flex;
+    height: 20em;
+    width: auto;
+    align-items: flex-end;
+    
+}
+
+.compHands {
+    display: flex;
+    height: 20em;
+    width: auto;
+    align-items: flex-end;
+}
+
+input,
+img {
+    background-color: honeydew;  
+
+}
+
+#rock,
+.compRock {
+    display: flex;
+    height: 140px;
+    width: 120px;
+}
+
+#paper,
+.compPaper {
     padding: 0 20px 0 0;
+    align-self: flex-start;
+    height: 140px;
+    width: 100px;
 }
 
-#scissors {
+#scissors,
+.compScissors {
     padding: 0 0 0 20px;
+    height: 140px;
+    width: 100px;
 }
 
+
+.vs {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
