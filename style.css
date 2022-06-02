@@ -1,0 +1,15 @@
+/* Buttons */
+.button {
+    background-color: gray;
+    height: auto;
+    width: 10em;
+}
+
+#paper {
+    padding: 0 20px 0 0;
+}
+
+#scissors {
+    padding: 0 0 0 20px;
+}
+

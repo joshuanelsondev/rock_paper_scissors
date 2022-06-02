@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <h1 id="title">Rock, Paper, Scissors</h1>
+
     <h2>Player: <span id="player"></span></h2>
     <h2>Player Score: <span id="player-score"></span></h2>
     <h2>Computer: <span id="computer"></span></h2>
@@ -18,13 +22,22 @@
    
     
     <div id="container">
-        <button class="button" id="rock">ROCK</button>
-        <button class="button" id="paper">PAPER</button>
-        <button class="button" id="scissors">SCISSORS</button>
+        <input type="image" id="rock" class="button" name="rock" src="rock.png" style="border: solid" alt="A black fist imitating the shape of a rock">
+        <!-- <button class="button" id="paper">PAPER</button> -->
+        <input type="image" id="paper" class="button" name="paper" src="paper.png" style="border: solid" alt="A black hand imitating the shape of paper">
+        <!-- <button class="button" id="scissors">SCISSORS</button> -->
+        <input type="image" id="scissors" class="button" name="scissors" src="scissors.png" style="border: solid" alt="A black hand imitating the shape of scissors">
     </div>
+    <!-- <input type="image"  class="button" name="rock" src="rock.png" border="solid"
+        alt="A black fist imitating the shape of a rock">
+    <input type="image"  class="button" name="paper" src="paper.png" border="solid"
+        alt="A black hand imitating the shape of paper">
+    <input type="image"  class="button" name="scissors" src="scissors.png" border="solid"
+        alt="A black hand imitating the shape of scissors"> -->
     
-
 
     <script  src="rock_paper_scissors.js" defer></script>
 </body>
 </html>
+
+

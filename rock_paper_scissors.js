@@ -8,7 +8,7 @@ const computerResult = document.getElementById('computer');
 const computerScoreDisplay = document.getElementById('computer-score');
 const roundResultDisplay = document.getElementById('result');
 const winnerDisplay = document.getElementById('winner');
-const playerButton = document.querySelectorAll('button');
+const playerButton = document.querySelectorAll('.button');
 const container = document.getElementById('container');
 let userChoice;
 let computerChoice;
