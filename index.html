@@ -9,15 +9,25 @@
 </head>
 
 <body>
-
-    <h1 id="title">Rock, Paper, Scissors</h1>
-
-    <h2>Player: <span id="player"></span></h2>
-    <h2>Player Score: <span id="player-score"></span></h2>
-    <h2>Computer: <span id="computer"></span></h2>
-    <h2>Computer Score: <span id="computer-score"></span></h2>
-    <h2 id="result"></h2>
-    <h2 id="winner"></h2>
+    <div class="header">
+        <h1 id="title">Rock, Paper, Scissors</h1>
+        <p>Click on a hand to begin. The first to win 5 rounds wins!</p>
+    </div>
+    <div class="info">
+        <div class="player-info">
+            <h2>Player: <span id="player"></span></h2>
+            <h2>Player Score: <span id="player-score"></span></h2>
+        </div>
+        <div class="results-info">
+            <h2 id="result"></h2>
+            <h2 id="winner"></h2>
+        </div>
+        <div class="comp-info">
+            <h2>Computer: <span id="computer"></span></h2>
+            <h2>Computer Score: <span id="computer-score"></span></h2>
+        </div>
+        
+    </div>
       
    
     
@@ -35,6 +45,7 @@
         </div>
     </div>
    
+    <div class="restart"></div>
     
 
     <script  src="rock_paper_scissors.js" defer></script>

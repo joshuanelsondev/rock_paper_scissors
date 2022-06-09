@@ -76,11 +76,11 @@ function winner() {
     roundResultDisplay.textContent = `Round Result: ${result}`;
 
     if (playerScore >= 5) {
-        winnerDisplay.textContent = "Player Wins!";
+        winnerDisplay.textContent = "Winner: Player Wins!";
         playerButton.forEach(playerChoice => playerChoice.removeEventListener('click', playGame));
         gameOver();
     } else if (computerScore >= 5) {
-        winnerDisplay.textContent = "Computer Wins!";
+        winnerDisplay.textContent = "Winner: Computer Wins!";
         playerButton.forEach(playerChoice => playerChoice.removeEventListener('click', playGame));
         gameOver();
     }
@@ -89,9 +89,12 @@ function winner() {
 // Create a button that appears when the game is over and refreshes the page
 
 function gameOver() {
+    const restart = document.querySelector('.restart');
     const restartButton = document.createElement('button');
+    restartButton.classList.add('restart-button');
     restartButton.innerText = "PLAY AGAIN";
-    container.appendChild(restartButton);
+    restartButton.style.cssText = 'border-radius: 10px;';
+    restart.append(restartButton);
     restartButton.addEventListener('click', playAgain);
 
 }

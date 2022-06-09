@@ -3,13 +3,30 @@ body {
     font-family: Courier, Roboto, sans-serif;
 }
 
+/* Header and player info */
+.header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 200px;
+    width: auto;
+    margin: 0 20em;
+    border-style: groove;
+    border-color: darkslategrey;
+}
 
-
+.info {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 /* Buttons */
 #container {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 10em;
 }
 
 .playerHands {
@@ -36,24 +53,39 @@ img {
 #rock,
 .compRock {
     display: flex;
-    height: 140px;
-    width: 120px;
+    height: 120px;
+    width: 100px;
 }
 
 #paper,
 .compPaper {
     padding: 0 20px 0 0;
     align-self: flex-start;
-    height: 140px;
-    width: 100px;
+    height: 120px;
+    width: 80px;
 }
 
 #scissors,
 .compScissors {
     padding: 0 0 0 20px;
-    height: 140px;
-    width: 100px;
+    height: 120px;
+    width: 80px;
 }
+
+.restart {
+    display: flex;
+    justify-content: center;
+}
+
+.restart-button {
+    color: black;
+    background-color: honeydew;
+    border-radius: 10px;
+    height: auto;
+    width: 10em;
+    font-weight: bold;
+}
+
 
 
 .vs {
