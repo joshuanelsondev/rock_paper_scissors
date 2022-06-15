@@ -10,6 +10,8 @@ const roundResultDisplay = document.getElementById('result');
 const winnerDisplay = document.getElementById('winner');
 const playerButton = document.querySelectorAll('.button');
 const container = document.getElementById('container');
+// Create a start button that prompts the user for their name and the name is used as a header for the user playing the game.
+const startButton = document.getElementById("startButton");
 let userChoice;
 let computerChoice;
 let result;
@@ -85,6 +87,7 @@ function winner() {
         gameOver();
     }
 }
+
 
 // Create a button that appears when the game is over and refreshes the page
 
