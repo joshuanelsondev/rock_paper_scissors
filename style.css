@@ -22,7 +22,23 @@ body {
     justify-content: space-evenly;
 }
 
-/* Buttons */
+/* Start button */
+#startBox {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#startButton {
+    color: black;
+    background-color: honeydew;
+    border-radius: 10px;
+    height: auto;
+    width: 10em;
+    font-weight: bold;
+}
+
+/* Game buttons */
 #container {
     display: flex;
     justify-content: space-evenly;
