@@ -113,3 +113,9 @@ h2#winner {
     display: flex;
     justify-content: space-around;
 }
+
+.centerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
