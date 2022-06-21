@@ -15,6 +15,7 @@ body {
     margin: 0 20em;
     border-style: groove;
     border-color: darkslategrey;
+    background-color: #81c784e3;
 }
 
 .gameInfo {
@@ -35,7 +36,7 @@ body {
 
 #startButton {
     color: black;
-    background-color: honeydew;
+    background-color: #81c784e3;
     border-radius: 10px;
     height: auto;
     width: 10em;
@@ -98,7 +99,7 @@ img {
 
 .restart-button {
     color: black;
-    background-color: honeydew;
+    background-color: #81c784e3;
     border-radius: 10px;
     height: auto;
     width: 10em;
