@@ -11,13 +11,14 @@ const winnerDisplay = document.getElementById('winner');
 const playerButton = document.querySelectorAll('.button');
 const container = document.getElementById('container');
 const startButton = document.getElementById("startButton");
+const nameBox = document.getElementById('nameBox');
 let userChoice;
 let computerChoice;
 let result;
 let playerScore = 0;
 let computerScore = 0;
 let playerChoice;
-let name;
+
 
 // A round is played when the user clicks on their choice
 
@@ -25,12 +26,12 @@ playerButton.forEach(playerChoice => playerChoice.addEventListener('click', play
 
 function playGame(e) {
     playerChoice = e.target.id;
-    playerName.textContent = userName + playerChoice;
+    playerName.textContent = name + ': ' + playerChoice;
     computerPlay();
     winner();
     playerScoreDisplay.textContent = playerScore;
     computerScoreDisplay.textContent = computerScore;
-
+    nameBox.style.cssText = 'display: none';
 }
 
 // Computer picks randomly, rock, paper, or scissors
@@ -80,7 +81,7 @@ function winner() {
     roundResultDisplay.textContent = `Round Result: ${result}`;
 
     if (playerScore >= 5) {
-        winnerDisplay.textContent =`Winner: ${name}!`;
+        winnerDisplay.textContent =`Winner: ` + name + '!';
         playerButton.forEach(playerChoice => playerChoice.removeEventListener('click', playGame));
         gameOver();
     } else if (computerScore >= 5) {
@@ -92,9 +93,11 @@ function winner() {
 
 // Create a start button that prompts the user for their name and the name is used as a header for the user playing the game.
 function startGame() {
-    name = document.getElementById("name").value;
-    playerName.textContent = name + ": ";
-    userName = playerName.textContent;
+    name = document.getElementById("nameBox").value;
+    playerName.textContent = name + ': ';
+
+    
+    
     
 
 }

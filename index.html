@@ -11,13 +11,13 @@
 <body>
     <div class="header">
         <h1 id="title">Rock, Paper, Scissors</h1>
-        <p>Click on a hand to begin. The first to win 5 rounds wins!</p>
+        <p class="gameInfo">*Enter your name and press START GAME. Click on a hand to begin. The first to win 5 rounds wins!</p>
     </div>
     <div id="startBox">
-        <input type="text" id="name" placeholder="Enter Your Name">
+        <input type="text" id="nameBox" placeholder="Enter Your Name">
         <button id="startButton" onclick="startGame()">START GAME</button>
     </div>
-    <div class="info">
+    <div class="playersInfo">
         <div class="player-info">
             <h2 id="playerName"><span class="player"></span></h2>
             <h2>Your Score: <span id="player-score"></span></h2>

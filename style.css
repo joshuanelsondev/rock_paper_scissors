@@ -17,7 +17,11 @@ body {
     border-color: darkslategrey;
 }
 
-.info {
+.gameInfo {
+  width: 40em;
+}
+
+.playersInfo {
     display: flex;
     justify-content: space-evenly;
 }
