@@ -14,12 +14,13 @@
         <p>Click on a hand to begin. The first to win 5 rounds wins!</p>
     </div>
     <div id="startBox">
-        <button id="startButton" onclick="startGame()">Start Game</button>
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <button id="startButton" onclick="startGame()">START GAME</button>
     </div>
     <div class="info">
         <div class="player-info">
-            <h2>Player: <span id="player"></span></h2>
-            <h2>Player Score: <span id="player-score"></span></h2>
+            <h2 id="playerName"><span class="player"></span></h2>
+            <h2>Your Score: <span id="player-score"></span></h2>
         </div>
         <div class="results-info">
             <h2 id="result"></h2>

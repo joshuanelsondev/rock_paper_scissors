@@ -2,7 +2,7 @@
 
 // Variables to be used from html
 
-const playerResult = document.getElementById('player');
+const playerName = document.getElementById('playerName');
 const playerScoreDisplay = document.getElementById('player-score');
 const computerResult = document.getElementById('computer');
 const computerScoreDisplay = document.getElementById('computer-score');
@@ -16,13 +16,16 @@ let computerChoice;
 let result;
 let playerScore = 0;
 let computerScore = 0;
+let playerChoice;
+let name;
 
 // A round is played when the user clicks on their choice
 
 playerButton.forEach(playerChoice => playerChoice.addEventListener('click', playGame));
 
 function playGame(e) {
-    playerResult.textContent = e.target.id;
+    playerChoice = e.target.id;
+    playerName.textContent = userName + playerChoice;
     computerPlay();
     winner();
     playerScoreDisplay.textContent = playerScore;
@@ -48,7 +51,7 @@ function computerPlay() {
 // Write a helper function that will determine which item beats the other
 
 function winner() {
-    player = playerResult.textContent;
+    player = playerChoice;
     computer = computerChoice;
 
     if ((player == "rock") && (computer == "scissors")) {
@@ -77,7 +80,7 @@ function winner() {
     roundResultDisplay.textContent = `Round Result: ${result}`;
 
     if (playerScore >= 5) {
-        winnerDisplay.textContent = "Winner: Player Wins!";
+        winnerDisplay.textContent =`Winner: ${name}!`;
         playerButton.forEach(playerChoice => playerChoice.removeEventListener('click', playGame));
         gameOver();
     } else if (computerScore >= 5) {
@@ -89,7 +92,10 @@ function winner() {
 
 // Create a start button that prompts the user for their name and the name is used as a header for the user playing the game.
 function startGame() {
-   
+    name = document.getElementById("name").value;
+    playerName.textContent = name + ": ";
+    userName = playerName.textContent;
+    
 
 }
 
