@@ -53,10 +53,10 @@
     </div>
    
     <footer class="footer">
-        <p>
+        <p id="copyright">
             Copyright ©
             <script>
-                document.createTextNode(new Date().getFullYear())
+                document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
             </script>
             <a href="https://github.com/josh-ua-nelson" target="_blank">josh-ua-nelson</a>
         </p>

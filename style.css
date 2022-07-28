@@ -124,3 +124,12 @@ h2#winner {
     flex-direction: column;
     justify-content: center;
 }
+
+footer {
+    text-align: center;
+}
+
+a { 
+    text-decoration: none;
+    color: #81c784e3;
+}
