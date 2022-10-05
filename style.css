@@ -1,0 +1,135 @@
+body {
+    background-color: honeydew;
+    font-family: Courier, Roboto, sans-serif;
+}
+
+/* Header and player info */
+.header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 200px;
+    width: auto;
+    margin: 0 20em;
+    border-style: groove;
+    border-color: darkslategrey;
+    background-color: #81c784e3;
+}
+
+.gameInfo {
+  width: 40em;
+}
+
+.playersInfo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Start button */
+#startBox {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#startButton {
+    color: black;
+    background-color: #81c784e3;
+    border-radius: 10px;
+    height: auto;
+    width: 10em;
+    font-weight: bold;
+}
+
+/* Game buttons */
+#container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 4em;
+}
+
+.playerHands {
+    display: flex;
+    height: 20em;
+    width: auto;
+    align-items: flex-end;
+    
+}
+
+.compHands {
+    display: flex;
+    height: 20em;
+    width: auto;
+    align-items: flex-end;
+}
+
+img {
+    background-color: honeydew;  
+
+}
+
+#rock,
+.compRock {
+    display: flex;
+    height: 120px;
+    width: 100px;
+}
+
+#paper,
+.compPaper {
+    padding: 0 20px 0 0;
+    align-self: flex-start;
+    height: 120px;
+    width: 80px;
+}
+
+#scissors,
+.compScissors {
+    padding: 0 0 0 20px;
+    height: 120px;
+    width: 80px;
+}
+
+.restart {
+    display: flex;
+    justify-content: center;
+}
+
+.restart-button {
+    color: black;
+    background-color: #81c784e3;
+    border-radius: 10px;
+    height: auto;
+    width: 10em;
+    font-weight: bold;
+}
+
+
+
+.vs {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+h2#winner {
+    display: flex;
+    justify-content: space-around;
+}
+
+.centerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+}
+
+a { 
+    text-decoration: none;
+    color: #81c784e3;
+}
