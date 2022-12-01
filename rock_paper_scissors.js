@@ -18,22 +18,26 @@ let result;
 let playerScore = 0;
 let computerScore = 0;
 let playerChoice;
-let userName;
+let userName = 'Player';
+let restartCheck = 0;
 
 
 
 // A round is played when the user clicks on their choice
 
-playerButton.forEach(playerChoice => playerChoice.addEventListener('click', playGame));
+playerButton.forEach(buttonPress => buttonPress.addEventListener('click', playGame));
 
 function playGame(e) {
     playerChoice = e.target.id;
     playerName.textContent =  userName + ': ' + playerChoice;
+
     computerPlay();
     winner();
     playerScoreDisplay.textContent = playerScore;
+    playerScoreDisplay.style.cssText = 'color: #3a723de3';
     computerScoreDisplay.textContent = computerScore;
-    nameBox.style.cssText = 'display: none';
+    computerScoreDisplay.style.cssText = 'color: #3a723de3';
+   
 }
 
 // Computer picks randomly, rock, paper, or scissors
@@ -95,8 +99,12 @@ function winner() {
 
 // Create a start button that prompts the user for theuserName and the name is used as a header for the user playing the game.
 function startGame() {
-    userName = document.getElementById("nameBox").value;
+    userName = document.getElementById("nameBox").value || 'Player';
     playerName.textContent = userName + ': ';
+    nameBox.style.cssText = 'display: none';
+    startButton.textContent = 'RESTART';
+    if (restartCheck > 0) { playAgain(); }
+    restartCheck++;
 
 }
 
