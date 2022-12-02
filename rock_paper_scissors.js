@@ -22,7 +22,6 @@ let userName = 'Player';
 let restartCheck = 0;
 
 
-
 // A round is played when the user clicks on their choice
 
 playerButton.forEach(buttonPress => buttonPress.addEventListener('click', playGame));
