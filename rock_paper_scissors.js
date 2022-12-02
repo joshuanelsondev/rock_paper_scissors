@@ -30,13 +30,13 @@ playerButton.forEach(buttonPress => buttonPress.addEventListener('click', playGa
 function playGame(e) {
     playerChoice = e.target.id;
     playerName.textContent =  userName + ': ' + playerChoice;
-
     computerPlay();
     winner();
     playerScoreDisplay.textContent = playerScore;
     playerScoreDisplay.style.cssText = 'color: #3a723de3';
     computerScoreDisplay.textContent = computerScore;
     computerScoreDisplay.style.cssText = 'color: #3a723de3';
+    if (!restartCheck) {startGame();}
    
 }
 
@@ -71,13 +71,13 @@ function winner() {
         result = "You Win!";
         playerScore++;
     } else if ((player == "rock") && (computer == "paper")) {
-        result = "Computer Wins!";
+        result = "Comp Wins!";
         computerScore++;
     } else if ((player == "scissors") && ("rock")) {
-        result = "Computer Wins!";
+        result = "Comp Wins!";
         computerScore++;
     } else if ((player == "paper") && (computer == "scissors")) {
-        result = "Computer Wins!";
+        result = "Comp Wins!";
         computerScore++;
     } else {
         result = "It's a Tie!";
@@ -88,16 +88,18 @@ function winner() {
 
     if (playerScore >= 5) {
         winnerDisplay.textContent =`Winner: ${userName}!`;
+        winnerDisplay.style.cssText = 'color: #3a723de3';
         playerButton.forEach(playerChoice => playerChoice.removeEventListener('click', playGame));
         gameOver();
     } else if (computerScore >= 5) {
         winnerDisplay.textContent = "Winner: Computer Wins!";
+        winnerDisplay.style.cssText = 'color: #3a723de3';
         playerButton.forEach(playerChoice => playerChoice.removeEventListener('click', playGame));
         gameOver();
     }
 }
 
-// Create a start button that prompts the user for theuserName and the name is used as a header for the user playing the game.
+// Create a start button that prompts the user for the userName and the name is used as a header for the user playing the game.
 function startGame() {
     userName = document.getElementById("nameBox").value || 'Player';
     playerName.textContent = userName + ': ';
@@ -113,14 +115,7 @@ function startGame() {
 // Create a button that appears when the game is over and refreshes the page
 
 function gameOver() {
-    const restart = document.querySelector('.restart');
-    const restartButton = document.createElement('button');
-    restartButton.classList.add('restart-button');
-    restartButton.innerText = "PLAY AGAIN";
-    restartButton.style.cssText = 'border-radius: 10px;';
-    restart.append(restartButton);
-    restartButton.addEventListener('click', playAgain);
-
+    startButton.textContent = 'PLAY AGAIN';
 }
 
 function playAgain() {

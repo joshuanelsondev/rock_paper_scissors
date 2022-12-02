@@ -4,9 +4,10 @@ body {
 }
 
 /* Header and player info */
+/* Fix header to be able to allow different screen sizes*/
 .header {
     display: flex;
-    flex-flow: column wrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     text-align: center;
