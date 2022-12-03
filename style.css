@@ -127,7 +127,9 @@ h2#winner {
 }
 
 footer {
-    text-align: center;
+    position: fixed;
+    bottom: 1%;
+    left: 50%;
 }
 
 a { 
