@@ -9,11 +9,11 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
     text-align: center;
     height: 200px;
     width: auto;
-    margin: 0 20em;
+    max-width: 600px;
+    margin: 0 auto;
     border-style: groove;
     border-color: darkslategrey;
     background-color: #81c784e3;
@@ -127,9 +127,9 @@ h2#winner {
 }
 
 footer {
-    position: fixed;
-    bottom: 1%;
-    left: 50%;
+    text-align: center;
+    position: sticky;
+    margin: 20vh 0 auto;
 }
 
 a { 
